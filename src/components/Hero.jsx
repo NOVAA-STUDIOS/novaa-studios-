@@ -51,9 +51,8 @@ export default function Hero() {
           transition={{ duration:0.9, ease, delay:0.28 }}
           style={{ fontSize:'clamp(3.2rem,8.5vw,6.5rem)', fontWeight:800, lineHeight:1.02, marginBottom:'1.6rem', letterSpacing:'-0.03em', color:'#fff' }}
         >
-          We Build Websites<br />
+          We Build Websites<br /> That Dominate.
           <span style={{ background:'linear-gradient(135deg,#FFD6C0 20%,#FFBFA0 80%)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
-            That Dominate.
           </span>
         </motion.h1>
 
