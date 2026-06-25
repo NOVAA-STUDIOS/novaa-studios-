@@ -1,19 +1,34 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
+/**
+ * Central navigation hook
+ * startProject  → /contact
+ * viewWork      → /work (or smooth scroll if already there)
+ * goTo(path)    → any route
+ */
 export function useProjectNavigation() {
-  const navigate = useNavigate()
+  const navigate     = useNavigate()
+  const { pathname } = useLocation()
+  const { startProject } = useProjectNavigation()
 
-  const startProject = () => navigate('/contact')
+  const startProject = () => {
+    navigate('/contact')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
-  const viewWork = (currentPath = '') => {
-    if (currentPath === '/work') {
-      // Already on work page — smooth scroll to projects
-      const el = document.getElementById('featured-projects')
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  const viewWork = () => {
+    if (pathname === '/work') {
+      document.getElementById('featured-projects')
+        ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     } else {
       navigate('/work')
     }
   }
 
-  return { startProject, viewWork }
+  const goTo = (path) => {
+    navigate(path)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  return { startProject, viewWork, goTo, pathname }
 }

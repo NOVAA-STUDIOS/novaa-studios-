@@ -1,11 +1,17 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useNavigate, useLocation } from 'react-router-dom'
+import { useProjectNavigation } from '../hooks/useNavigation'
 
 const LINKS = ['Home','Services','About','Work','Contact']
 
 export default function Navbar() {
   const [active, setActive] = useState('Home')
   const [open,   setOpen]   = useState(false)
+  const [hov,      setHov]      = useState(null)
+  const navigate     = useNavigate()
+  const { pathname } = useLocation()
+  const { startProject } = useProjectNavigation()
 
   return (
     <>

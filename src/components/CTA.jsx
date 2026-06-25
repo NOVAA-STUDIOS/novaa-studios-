@@ -1,82 +1,44 @@
-import { motion } from 'framer-motion'
+import { motion }  from 'framer-motion'
+import CTAButton   from './CTAButton'
 
 export default function CTA() {
   return (
     <section style={{ padding:'6rem 2rem', textAlign:'center' }}>
       <motion.div
-        initial={{ opacity:0, y:36 }}
+        initial={{ opacity:0, y:40 }}
         whileInView={{ opacity:1, y:0 }}
         viewport={{ once:true }}
-        transition={{ duration:0.8, ease:[0.22,1,0.36,1] }}
+        transition={{ duration:0.7, ease:[0.22,1,0.36,1] }}
         style={{
-          maxWidth:       '680px',
-          margin:         '0 auto',
-          padding:        '4rem 2.5rem',
-          background:     'rgba(10,132,255,0.07)',
-          border:         '1px solid rgba(10,132,255,0.18)',
-          borderRadius:   '28px',
-          backdropFilter: 'blur(20px)',
-          position:       'relative',
-          overflow:       'hidden',
+          maxWidth:'680px', margin:'0 auto', padding:'4rem 2.5rem',
+          background:'rgba(10,132,255,0.07)',
+          border:'1px solid rgba(10,132,255,0.18)',
+          borderRadius:'28px', backdropFilter:'blur(20px)',
+          position:'relative', overflow:'hidden',
         }}
       >
-        {/* Inner glow */}
         <div style={{
-          position:     'absolute',
-          top:'-60%', left:'50%',
-          transform:    'translateX(-50%)',
-          width:        '400px', height:'300px',
-          background:   'radial-gradient(ellipse, rgba(10,132,255,0.15) 0%, transparent 70%)',
+          position:'absolute', top:'-60%', left:'50%', transform:'translateX(-50%)',
+          width:'400px', height:'300px',
+          background:'radial-gradient(ellipse,rgba(10,132,255,0.15) 0%,transparent 70%)',
           pointerEvents:'none',
         }} />
 
-        <h2 style={{
-          fontSize:    'clamp(1.8rem,4.5vw,2.8rem)',
-          fontWeight:  800,
-          marginBottom:'1rem',
-          color:       '#fff',
-          lineHeight:  1.15,
-          letterSpacing:'-0.02em',
-          position:    'relative', zIndex:1,
-        }}>
+        <h2 style={{ fontSize:'clamp(1.8rem,4.5vw,2.8rem)', fontWeight:800, marginBottom:'1rem', color:'#fff', lineHeight:1.2, position:'relative', zIndex:1 }}>
           Ready to Build Something{' '}
-          <span style={{
-            background:'linear-gradient(135deg,#FFD6C0,#FFBFA0)',
-            WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent',
-          }}>
+          <span style={{ background:'linear-gradient(135deg,#FFD6C0,#FFBFA0)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
             Legendary?
           </span>
         </h2>
 
-        <p style={{
-          color:'rgba(255,255,255,0.4)',
-          marginBottom:'2.5rem',
-          fontSize:'1rem',
-          lineHeight:1.75,
-          position:'relative', zIndex:1,
-        }}>
+        <p style={{ color:'rgba(255,255,255,0.4)', marginBottom:'2.5rem', fontSize:'1rem', lineHeight:1.75, position:'relative', zIndex:1 }}>
           Join 150+ startups who trusted NOVAA to build their digital presence.
         </p>
 
-        <motion.button
-          whileHover={{ scale:1.04, boxShadow:'0 0 40px rgba(10,132,255,0.5)' }}
-          whileTap={{ scale:0.97 }}
-          style={{
-            position:    'relative', zIndex:1,
-            padding:     '13px 32px',
-            background:  '#0A84FF',
-            border:      'none',
-            borderRadius:'50px',
-            color:       '#fff',
-            fontWeight:  600,
-            fontSize:    '0.95rem',
-            cursor:      'pointer',
-            boxShadow:   '0 0 28px rgba(10,132,255,0.35)',
-            letterSpacing:'0.2px',
-          }}
-        >
+        {/* ✅ CTAButton — routes to /contact */}
+        <CTAButton size="lg" style={{ position:'relative', zIndex:1 }}>
           Start Free Consultation →
-        </motion.button>
+        </CTAButton>
       </motion.div>
     </section>
   )
