@@ -240,7 +240,7 @@ export default function SEODashboard() {
           border:'1px solid rgba(255,255,255,0.09)',
           fontSize:'0.68rem', color:'rgba(255,255,255,0.45)',
         }}>
-          May 1 – here it is  ▾q
+          May 1 – May 31, 2024 ▾q
         </div>
       </div>
 
