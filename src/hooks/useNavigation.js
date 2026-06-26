@@ -9,7 +9,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 export function useProjectNavigation() {
   const navigate     = useNavigate()
   const { pathname } = useLocation()
-  const { startProject } = useProjectNavigation()
+  
 
   const startProject = () => {
     navigate('/contact')
