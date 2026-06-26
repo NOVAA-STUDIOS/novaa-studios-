@@ -2,6 +2,8 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { motion }                  from 'framer-motion'
 import Navbar                      from '../components/Navbar'
 import Footer                      from '../components/Footer'
+import BackButton                  from '../components/BackButton'
+import CTAButton                   from '../components/CTAButton'
 
 const ease = [0.22, 1, 0.36, 1]
 
@@ -157,6 +159,11 @@ export default function CaseStudy() {
             marginBottom:'3rem',
           }}
         >
+
+          <div style={{ marginBottom:'1.5rem' }}>
+  <BackButton label="Back to Work" />
+</div>
+
           <span onClick={() => navigate('/')}
             style={{ cursor:'pointer', color:'rgba(255,255,255,0.35)' }}>Home</span>
           <span>›</span>
@@ -424,7 +431,7 @@ export default function CaseStudy() {
                 color:'#fff', fontWeight:600, fontSize:'0.93rem', cursor:'pointer',
               }}
             >
-              Start Your Project →
+              <CTAButton size="lg">Start Your Project →</CTAButton>
             </motion.button>
             <motion.button
               onClick={() => navigate('/work')}
@@ -438,7 +445,7 @@ export default function CaseStudy() {
                 fontSize:'0.93rem', cursor:'pointer',
               }}
             >
-              ← Back to Work
+              <CTAButton size="lg">View Our Work →</CTAButton> 
             </motion.button>
           </div>
         </motion.div>

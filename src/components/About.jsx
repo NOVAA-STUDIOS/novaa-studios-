@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import CTAButton from './CTAButton'
 import FeatureCard from './FeatureCard'
 
 const ease = [0.22, 1, 0.36, 1]
@@ -177,13 +178,9 @@ export default function About() {
               transition:           'all 0.3s ease',
             }}
           >
-            Let's Work Together
-            <span style={{
-              display:'flex', alignItems:'center', justifyContent:'center',
-              width:'24px', height:'24px', borderRadius:'50%',
-              background:'rgba(255,255,255,0.1)',
-              fontSize:'0.85rem',
-            }}>→</span>
+            <CTAButton size="md">
+              Let's Work Together →
+            </CTAButton>
           </motion.button>
         </div>
 

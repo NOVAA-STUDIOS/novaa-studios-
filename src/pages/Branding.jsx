@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { Link }   from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import BackButton from '../components/BackButton'
+import CTAButton  from '../components/CTAButton'
 
 const ease = [0.22, 1, 0.36, 1]
 
@@ -196,6 +198,11 @@ export default function Branding() {
             marginBottom:'2rem',
           }}
         >
+
+<div style={{ marginBottom:'1.5rem' }}>
+  <BackButton />
+</div>
+
           <Link to="/" style={{ color:'rgba(255,255,255,0.35)', textDecoration:'none' }}>Home</Link>
           <span>›</span>
           <Link to="/#services" style={{ color:'rgba(255,255,255,0.35)', textDecoration:'none' }}>Services</Link>
@@ -306,12 +313,7 @@ export default function Branding() {
                   cursor:'pointer', transition:'all 0.3s ease',
                 }}
               >
-                Start Your Project
-                <span style={{
-                  display:'flex', alignItems:'center', justifyContent:'center',
-                  width:'24px', height:'24px', borderRadius:'6px',
-                  background:'rgba(255,255,255,0.15)', fontSize:'0.85rem',
-                }}>→</span>
+                <CTAButton size="md">Start Your Project</CTAButton>
               </motion.button>
 
               <motion.button
@@ -780,12 +782,7 @@ export default function Branding() {
               transition:'all 0.3s ease',
             }}
           >
-            Start Your Project
-            <span style={{
-              display:'flex', alignItems:'center', justifyContent:'center',
-              width:'26px', height:'26px', borderRadius:'8px',
-              background:'rgba(255,255,255,0.15)', fontSize:'0.9rem',
-            }}>→</span>
+            <CTAButton size="lg">Start Your Project →</CTAButton>
           </motion.button>
         </motion.div>
 
