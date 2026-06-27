@@ -752,3 +752,62 @@ img, canvas, video, iframe {
 [style*="position:fixed"] {
   max-width: unset;
 }
+
+/* ── MOBILE OVERFLOW FIX ── */
+html, body { overflow-x: hidden; max-width: 100vw; }
+* { box-sizing: border-box; }
+
+/* ── NAVBAR RESPONSIVE ── */
+@media (max-width: 768px) {
+  .desktop-nav { display: none !important; }
+}
+@media (min-width: 769px) {
+  .desktop-nav { display: flex !important; }
+}
+
+/* ── HERO MOBILE ── */
+@media (max-width: 480px) {
+  #home { padding: 90px 1rem 2rem !important; }
+  #home h1 { font-size: clamp(2rem,10vw,3rem) !important; }
+  #home > div > div > div[style*="display: flex"][style*="gap: 14px"] {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  #home button { width: 100% !important; justify-content: center !important; }
+}
+
+/* ── GRIDS MOBILE ── */
+@media (max-width: 640px) {
+  .about-hero-grid,
+  .work-hero-grid,
+  .contact-main-grid,
+  .wd-hero-grid,
+  .wd-offer-grid,
+  .why-grid,
+  .cs-two-col { grid-template-columns: 1fr !important; }
+
+  .form-row { flex-direction: column !important; }
+  .process-row { flex-wrap: wrap !important; }
+
+  /* Floating absolute cards */
+  [style*="position: absolute"][style*="bottom: -5%"],
+  [style*="position: absolute"][style*="left: -8%"],
+  [style*="position: absolute"][style*="left: -24px"] {
+    position: relative !important;
+    bottom: auto !important; left: auto !important; right: auto !important;
+    margin-top: 1rem !important;
+  }
+
+  /* Section padding */
+  section { padding-left: 1rem !important; padding-right: 1rem !important; }
+
+  /* Cards padding */
+  [style*="padding: 2rem"][style*="border-radius"] { padding: 1.25rem !important; }
+  [style*="padding: 2.5rem 3rem"] { padding: 1.5rem 1rem !important; }
+}
+
+/* ── INPUTS iOS ZOOM FIX ── */
+input, textarea, select { font-size: 16px !important; }
+
+/* ── TOUCH TARGETS ── */
+button, a { min-height: 44px; }

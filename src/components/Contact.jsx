@@ -44,23 +44,32 @@ ${fields.message}
 function openEmail() {
   const subject = encodeURIComponent('New Project Inquiry')
   const body    = encodeURIComponent(
-`Hello NOVAA Studios,
+`Hello,
 
-I would like to discuss a new project with your team.
+I would like to discuss a new project.
 
-Here are my details:
-
-Name: 
-Company: 
-Email: 
-Phone: 
-Project Description: 
+Project Details:
+- Name: 
+- Company: 
+- Budget: 
+- Timeline: 
+- Requirements: 
 
 Looking forward to hearing from you.
 
-Regards,`
-  )
-  window.location.href = `mailto:${EMAIL_ADDRESS}?subject=${subject}&body=${body}`
+Thank you.`)
+
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL_ADDRESS}&su=${subject}&body=${body}`
+
+  /* Try Gmail first, fallback to mailto */
+  try {
+    const win = window.open(gmailUrl, '_blank', 'noopener,noreferrer')
+    if (!win || win.closed || typeof win.closed === 'undefined') {
+      window.location.href = `mailto:${EMAIL_ADDRESS}?subject=${subject}&body=${body}`
+    }
+  } catch {
+    window.location.href = `mailto:${EMAIL_ADDRESS}?subject=${subject}&body=${body}`
+  }
 }
 
 /* ── Glass Input ── */
