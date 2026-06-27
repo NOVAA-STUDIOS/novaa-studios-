@@ -73,7 +73,7 @@ export default function Navbar() {
           left:      '50%',
           transform: 'translateX(-50%)',
           zIndex:    1000,
-          width:     'min(96vw, 1440px)',
+          width:     'min(144vw, 1440px)',
         }}
       >
         {/* Glass strip */}
