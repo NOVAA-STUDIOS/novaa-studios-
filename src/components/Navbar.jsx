@@ -76,7 +76,7 @@ export default function Navbar() {
   position:'fixed', top:'18px',
   left:'16px', right:'16px',
   zIndex:1000,
-          width:'calc(100vw - 32px)',
+  display:'flex', alignItems:'center', justifyContent:'center',
         }}
       >
         <div style={{
