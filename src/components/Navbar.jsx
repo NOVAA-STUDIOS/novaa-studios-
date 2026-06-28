@@ -74,7 +74,7 @@ export default function Navbar() {
         transition={{ duration:0.85, ease:SP, delay:0.06 }}
         style={{
   position:'fixed',
-  top:'18px',
+  top:'0px',
   left:'0',
   right:'0',
   width:'100%',
