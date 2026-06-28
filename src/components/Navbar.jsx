@@ -73,15 +73,25 @@ export default function Navbar() {
         animate={{ y:0,   opacity:1 }}
         transition={{ duration:0.85, ease:SP, delay:0.06 }}
         style={{
-  position:'fixed', top:'18px',
-  left:'172px', right:'172px',
+  position:'fixed',
+  top:'18px',
+  left:'0',
+  right:'0',
+  width:'100%',
+  padding:'0 20px',
+  boxSizing:'border-box',
   zIndex:1000,
-  display:'flex', alignItems:'center', justifyContent:'center',
-        }}
+  display:'flex',
+  alignItems:'center',
+  justifyContent:'center',
+}}
       >
         <div style={{
+          width:                '100%',
+          maxWidth:             '100%',
           height:               '76px',
           borderRadius:         '20px',
+          borderRadius:         '16px',
           display:              'flex',
           alignItems:           'center',
           justifyContent:       'space-between',
@@ -94,6 +104,7 @@ export default function Navbar() {
           transition:           'background 0.4s, box-shadow 0.4s',
           position:             'relative',
           overflow:             'visible',
+          
         }}>
           {/* Shine */}
           <div style={{
