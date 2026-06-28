@@ -19,12 +19,28 @@ export default function Navbar() {
   const navigate         = useNavigate()
   const { pathname }     = useLocation()
   const { startProject } = useProjectNavigation()
+  const [showNav, setShowNav] = useState(true);
+const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', fn, { passive:true })
-    return () => window.removeEventListener('scroll', fn)
-  }, [])
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    setScrolled(currentScrollY > 20);
+
+    if (currentScrollY > lastScrollY && currentScrollY > 80) {
+      setShowNav(false); // Scroll Down → Hide
+    } else {
+      setShowNav(true); // Scroll Up → Show
+    }
+
+    setLastScrollY(currentScrollY);
+  };
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, [lastScrollY]);
 
   useEffect(() => { setOpen(false) }, [pathname])
 
@@ -70,8 +86,14 @@ export default function Navbar() {
       <motion.div
         className="desktop-nav"
         initial={{ y:-90, opacity:0 }}
-        animate={{ y:0,   opacity:1 }}
-        transition={{ duration:0.85, ease:SP, delay:0.06 }}
+        animate={{
+  y: showNav ? 0 : -80,
+  opacity: showNav ? 1 : 0,
+}}
+        transition={{
+  duration: 0.35,
+  ease: [0.22, 1, 0.36, 1],
+}}
         style={{
   position:'fixed',
   top:'4px',
