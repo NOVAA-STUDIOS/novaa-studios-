@@ -73,10 +73,10 @@ export default function Navbar() {
         animate={{ y:0,   opacity:1 }}
         transition={{ duration:0.85, ease:SP, delay:0.06 }}
         style={{
-          position:'fixed', top:'18px',
-          left:'50%', transform:'translateX(-50%)',
-          zIndex:1000,
-          width:'min(96vw, 1520px)',
+  position:'fixed', top:'18px',
+  left:'16px', right:'16px',
+  zIndex:1000,
+          width:'calc(100vw - 32px)',
         }}
       >
         <div style={{
