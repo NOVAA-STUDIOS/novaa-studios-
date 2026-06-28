@@ -97,79 +97,107 @@ export default function Navbar() {
   )
 
   /* ── Dropdown panel — shared ── */
-  const DropdownPanel = ({ topOffset = '100%', rightOffset = 0 }) => (
+  function DropPanel({ open, setOpen, isActive, go, startProject, topOffset, width }) {
+  return (
     <AnimatePresence>
       {open && (
         <>
-          <motion.div key="bd"
+          <motion.div
+            key="bd"
             initial={{ opacity:0 }} animate={{ opacity:1 }} exit={{ opacity:0 }}
-            transition={{ duration:0.25 }}
+            transition={{ duration:0.18 }}
             onClick={() => setOpen(false)}
-            style={{ position:'fixed', inset:0, zIndex:998, background:'rgba(0,0,0,0.35)', backdropFilter:'blur(3px)', WebkitBackdropFilter:'blur(3px)' }}
+            style={{ position:'fixed', inset:0, zIndex:1001, cursor:'default' }}
           />
-          <motion.div key="panel"
-            initial={{ opacity:0, y:-16, scale:0.97 }}
-            animate={{ opacity:1, y:0,   scale:1    }}
-            exit={{   opacity:0, y:-12,  scale:0.97 }}
-            transition={{ duration:0.32, ease }}
+
+          <motion.div
+            key="panel"
+            role="menu"
+            initial={{ opacity:0, y:-20, scale:0.95, filter:'blur(4px)' }}
+            animate={{ opacity:1, y:0,   scale:1,    filter:'blur(0px)' }}
+            exit={{   opacity:0, y:-16,  scale:0.95, filter:'blur(4px)' }}
+            transition={{ duration:0.34, ease:[0.22,1,0.36,1] }}
             style={{
-              position:'absolute', top:topOffset, right:rightOffset,
-              width:'220px', zIndex:999,
-              ...glassPanel,
-              borderRadius:'18px', overflow:'hidden',
-              boxShadow:'0 24px 64px rgba(0,0,0,0.65), inset 0 1px 0 rgba(255,255,255,0.1)',
-              marginTop:'10px',
+              position:             'fixed',        /* fixed instead of absolute */
+              top:                  '90px',         /* below navbar */
+              right:                '16px',         /* always 16px from right edge */
+              width:                'min(290px, calc(100vw - 32px))',
+              zIndex:               1002,
+              background:           'rgba(6,4,16,0.94)',
+              backdropFilter:       'blur(40px) saturate(200%) brightness(1.08)',
+              WebkitBackdropFilter: 'blur(40px) saturate(200%) brightness(1.08)',
+              border:               '1px solid rgba(255,255,255,0.1)',
+              borderRadius:         '22px',
+              overflow:             'hidden',
+              boxShadow:            '0 0 0 0.5px rgba(255,255,255,0.04), 0 24px 70px rgba(0,0,0,0.65), inset 0 1px 0 rgba(255,255,255,0.12)',
             }}
           >
-            <div style={{ height:'1px', background:'linear-gradient(90deg,transparent,rgba(99,102,241,0.7),transparent)' }} />
-            <div style={{ padding:'8px' }}>
+            {/* Accent line */}
+            <div style={{ height:'1px', background:'linear-gradient(90deg,transparent 5%,rgba(99,102,241,0.8) 50%,transparent 95%)' }}/>
+
+            {/* Items */}
+            <nav style={{ padding:'8px' }}>
               {LINKS.map((link, i) => {
                 const active = isActive(link.href)
                 return (
-                  <motion.button key={link.label} onClick={() => go(link.href)}
-                    initial={{ opacity:0, y:-6 }}
-                    animate={{ opacity:1, y:0 }}
-                    transition={{ delay:i*0.04, duration:0.25, ease }}
-                    whileHover={{ background:'rgba(255,255,255,0.07)' }}
+                  <motion.button
+                    key={link.label}
+                    role="menuitem"
+                    onClick={() => go(link.href)}
+                    initial={{ opacity:0, x:-8 }}
+                    animate={{ opacity:1, x:0  }}
+                    transition={{ delay:i*0.04, duration:0.26, ease:[0.22,1,0.36,1] }}
+                    whileHover={{ background:'rgba(255,255,255,0.07)', x:3 }}
                     whileTap={{ scale:0.98 }}
                     style={{
-                      width:'100%', display:'flex', alignItems:'center', gap:'13px',
-                      padding:'12px 12px', borderRadius:'11px',
-                      background:active?'rgba(99,102,241,0.13)':'transparent',
+                      width:'100%', display:'flex', alignItems:'center', gap:'14px',
+                      padding:'13px 14px', borderRadius:'13px',
+                      background: active ? 'rgba(99,102,241,0.14)' : 'transparent',
                       border:'none',
-                      borderLeft:active?'2.5px solid #6366f1':'2.5px solid transparent',
+                      borderLeft: active ? '2.5px solid #6366f1' : '2.5px solid transparent',
                       cursor:'pointer', textAlign:'left',
                       fontFamily:'Inter,sans-serif', fontSize:'0.95rem',
-                      fontWeight:active?600:400,
-                      color:active?'#818cf8':'rgba(255,255,255,0.72)',
-                      transition:'all 0.2s ease', minHeight:'48px',
-                    }}>
+                      fontWeight: active ? 600 : 400,
+                      color: active ? '#818cf8' : 'rgba(255,255,255,0.72)',
+                      transition:'background 0.2s, color 0.2s',
+                      minHeight:'52px', outline:'none',
+                    }}
+                  >
                     <div style={{
-                      width:'34px', height:'34px', borderRadius:'9px', flexShrink:0,
-                      display:'flex', alignItems:'center', justifyContent:'center', fontSize:'1rem',
-                      background:active?'rgba(99,102,241,0.22)':'rgba(255,255,255,0.07)',
-                      border:active?'1px solid rgba(99,102,241,0.4)':'1px solid rgba(255,255,255,0.09)',
+                      width:'36px', height:'36px', borderRadius:'10px', flexShrink:0,
+                      display:'flex', alignItems:'center', justifyContent:'center', fontSize:'1.05rem',
+                      background: active ? 'rgba(99,102,241,0.24)' : 'rgba(255,255,255,0.07)',
+                      border: active ? '1px solid rgba(99,102,241,0.42)' : '1px solid rgba(255,255,255,0.09)',
+                      boxShadow: active ? '0 0 14px rgba(99,102,241,0.25)' : 'none',
+                      transition:'all 0.2s ease',
                     }}>
                       {link.icon}
                     </div>
-                    {link.label}
-                    {active && <span style={{ marginLeft:'auto', fontSize:'0.7rem', color:'#818cf8' }}>●</span>}
+                    <span style={{ flex:1 }}>{link.label}</span>
+                    {active && (
+                      <span style={{ width:'6px', height:'6px', borderRadius:'50%', background:'#6366f1', boxShadow:'0 0 10px rgba(99,102,241,0.9)', flexShrink:0 }}/>
+                    )}
                   </motion.button>
                 )
               })}
-            </div>
-            <div style={{ padding:'4px 12px 12px' }}>
-              <motion.button onClick={() => { setOpen(false); startProject() }}
-                whileHover={{ scale:1.02 }} whileTap={{ scale:0.97 }}
+            </nav>
+
+            {/* CTA */}
+            <div style={{ padding:'2px 10px 12px' }}>
+              <motion.button
+                onClick={() => { setOpen(false); startProject() }}
+                whileHover={{ scale:1.02, boxShadow:'0 0 30px rgba(99,102,241,0.5)' }}
+                whileTap={{ scale:0.97 }}
                 style={{
-                  width:'100%', padding:'13px', borderRadius:'11px',
+                  width:'100%', padding:'14px', borderRadius:'13px',
                   background:'linear-gradient(135deg,#6366f1,#7c3aed)',
-                  border:'1px solid rgba(150,100,255,0.4)',
-                  boxShadow:'inset 0 1px 0 rgba(255,255,255,0.18),0 4px 20px rgba(99,102,241,0.3)',
+                  border:'1px solid rgba(160,130,255,0.4)',
+                  boxShadow:'inset 0 1px 0 rgba(255,255,255,0.22)',
                   color:'#fff', fontFamily:'Inter,sans-serif',
                   fontWeight:700, fontSize:'0.95rem', cursor:'pointer',
-                  transition:'all 0.25s ease', minHeight:'46px',
-                }}>
+                  transition:'all 0.25s ease', minHeight:'50px', outline:'none',
+                }}
+              >
                 Let's Talk →
               </motion.button>
             </div>
@@ -178,6 +206,7 @@ export default function Navbar() {
       )}
     </AnimatePresence>
   )
+}
 
   return (
     <>
