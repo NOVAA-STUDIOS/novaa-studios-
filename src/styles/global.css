@@ -820,3 +820,8 @@ button, a { min-height: 44px; }
   .desktop-nav { display: flex !important; }
   .mobile-nav  { display: none !important; }
 }
+
+@media (max-width: 900px) {
+  .cs-hero-grid    { grid-template-columns: 1fr !important; }
+  .cs-gallery-grid { grid-template-columns: 1fr !important; }
+}
