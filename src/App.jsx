@@ -11,6 +11,7 @@ import About            from './components/About'
 import Work             from './components/Work'
 import Contact          from './components/Contact'
 import Footer           from './components/Footer'
+import Projects         from './pages/Projects'
 
 /* ── Pages ── */
 import WebDesign        from './pages/WebDesign'
@@ -18,7 +19,7 @@ import WebDevelopment   from './pages/WebDevelopment'
 import Branding         from './pages/Branding'
 import SEOMarketing     from './pages/SEOMarketing'
 import CaseStudy        from './pages/CaseStudy'
-import Projects         from './pages/Projects'
+
 
 /* ── Scroll to top on every route change ── */
 function ScrollToTop() {
