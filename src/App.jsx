@@ -101,10 +101,9 @@ export default function App() {
         <Route path="/services/web-development" element={<WebDevelopment />} />
         <Route path="/services/branding"        element={<Branding />}      />
         <Route path="/services/seo-marketing"   element={<SEOMarketing />}  />
-        
 
         {/* Case studies */}
-        <Route path="/work/:slug" element={<CaseStudy />} />
+        <Route path="/work/:slug"               element={<CaseStudy />}     />
 
         {/* 404 fallback */}
         <Route path="*"                         element={<HomePage />}      />
