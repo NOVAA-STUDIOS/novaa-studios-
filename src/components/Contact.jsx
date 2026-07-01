@@ -617,7 +617,7 @@ export default function Contact() {
             <InfoRow icon="📱" label="WhatsApp" color="teal"
               lines={['+91 9548861483', 'Tap to chat instantly']} />
             <InfoRow icon="✉️" label="Email" color="purple"
-              lines={['novaastudioss012@gmail.com']} />
+              lines={['novaastudioss01@gmail.com']} />
             <InfoRow icon="📍" label="Location" color="teal"
               lines={['India', 'Available Worldwide']} />
             <InfoRow icon="🕐" label="Business Hours" color="purple"

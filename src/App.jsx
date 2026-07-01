@@ -18,6 +18,7 @@ import WebDevelopment   from './pages/WebDevelopment'
 import Branding         from './pages/Branding'
 import SEOMarketing     from './pages/SEOMarketing'
 import CaseStudy        from './pages/CaseStudy'
+import Projects         from './pages/Projects'
 
 /* ── Scroll to top on every route change ── */
 function ScrollToTop() {
@@ -104,6 +105,9 @@ export default function App() {
 
         {/* Case studies */}
         <Route path="/work/:slug"               element={<CaseStudy />}     />
+
+        {/* Projects */}
+        <Route path="/projects"                 element={<Projects />}       />
 
         {/* 404 fallback */}
         <Route path="*"                         element={<HomePage />}      />

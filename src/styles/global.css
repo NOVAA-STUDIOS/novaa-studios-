@@ -817,3 +817,6 @@ button, a { min-height: 44px; }
   .mobile-nav  { display: none !important; }
 }
 
+@media (max-width: 768px) {
+  .proj-hero-grid { grid-template-columns: 1fr !important; }
+}
