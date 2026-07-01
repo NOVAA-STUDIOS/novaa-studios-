@@ -23,7 +23,7 @@ export default function Stats() {
         {DATA.map((s, i) => (
           <motion.div
             key={s.l}
-            initial={{ opacity:0, y:16 }}
+            initial={{ opacity:1, y:16 }}
             whileInView={{ opacity:1, y:0 }}
             viewport={{ once:true }}
             transition={{ delay:i*0.1, duration:0.6 }}
@@ -36,6 +36,7 @@ export default function Stats() {
               background:          'linear-gradient(135deg,#fff 30%,rgba(255,255,255,0.5) 100%)',
               WebkitBackgroundClip:'text',
               WebkitTextFillColor: 'transparent',
+              backgroundClip:      'text',
             }}>
               {s.n}
             </p>

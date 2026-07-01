@@ -11,7 +11,7 @@ const ease = [0.22, 1, 0.36, 1]
 function BulletItem({ text, delay = 0 }) {
   return (
     <motion.div
-      initial={{ opacity:0, x:-12 }}
+      initial={{ opacity:1, x:-12 }}
       whileInView={{ opacity:1, x:0 }}
       viewport={{ once:true }}
       transition={{ duration:0.45, delay, ease }}
@@ -52,7 +52,7 @@ function ProcessStep({ num, icon, title, desc, delay=0, isLast=false }) {
         }} />
       )}
       <motion.div
-        initial={{ opacity:0, y:20 }}
+        initial={{ opacity:1, y:20 }}
         whileInView={{ opacity:1, y:0 }}
         viewport={{ once:true }}
         transition={{ duration:0.6, delay, ease }}
@@ -111,7 +111,7 @@ function ProcessStep({ num, icon, title, desc, delay=0, isLast=false }) {
 function WhyCard({ icon, title, desc, color, delay=0 }) {
   return (
     <motion.div
-      initial={{ opacity:0, y:16 }}
+      initial={{ opacity:1, y:16 }}
       whileInView={{ opacity:1, y:0 }}
       viewport={{ once:true }}
       transition={{ duration:0.5, delay, ease }}
@@ -150,7 +150,7 @@ function WhyCard({ icon, title, desc, color, delay=0 }) {
 function BrandLogo({ icon, name, delay=0 }) {
   return (
     <motion.div
-      initial={{ opacity:0, y:10 }}
+      initial={{ opacity:1, y:10 }}
       whileInView={{ opacity:1, y:0 }}
       viewport={{ once:true }}
       transition={{ duration:0.45, delay, ease }}
@@ -188,7 +188,7 @@ export default function Branding() {
 
         {/* Breadcrumb */}
         <motion.div
-          initial={{ opacity:0 }}
+          initial={{ opacity:1 }}
           animate={{ opacity:1 }}
           transition={{ duration:0.6, delay:0.2 }}
           style={{
@@ -223,7 +223,7 @@ export default function Branding() {
           <div>
             {/* Badge */}
             <motion.div
-              initial={{ opacity:0, y:14 }}
+              initial={{ opacity:1, y:14 }}
               animate={{ opacity:1, y:0 }}
               transition={{ duration:0.6, ease, delay:0.1 }}
               style={{ marginBottom:'1.5rem' }}
@@ -254,7 +254,7 @@ export default function Branding() {
 
             {/* Headline */}
             <motion.h1
-              initial={{ opacity:0, y:28 }}
+              initial={{ opacity:1, y:28 }}
               animate={{ opacity:1, y:0 }}
               transition={{ duration:0.9, ease, delay:0.2 }}
               style={{
@@ -282,7 +282,7 @@ export default function Branding() {
 
             {/* Para */}
             <motion.p
-              initial={{ opacity:0, y:16 }}
+              initial={{ opacity:1, y:16 }}
               animate={{ opacity:1, y:0 }}
               transition={{ duration:0.7, ease, delay:0.32 }}
               style={{
@@ -295,7 +295,7 @@ export default function Branding() {
 
             {/* Buttons */}
             <motion.div
-              initial={{ opacity:0, y:14 }}
+              initial={{ opacity:1, y:14 }}
               animate={{ opacity:1, y:0 }}
               transition={{ duration:0.6, ease, delay:0.42 }}
               style={{ display:'flex', gap:'12px', flexWrap:'wrap' }}
@@ -335,7 +335,7 @@ export default function Branding() {
 
           {/* RIGHT — Branding Mockup */}
           <motion.div
-            initial={{ opacity:0, x:32 }}
+            initial={{ opacity:1, x:32 }}
             animate={{ opacity:1, x:0 }}
             transition={{ duration:0.9, ease, delay:0.25 }}
             style={{ position:'relative' }}
@@ -508,7 +508,7 @@ export default function Branding() {
 
             {/* Floating stat card */}
             <motion.div
-              initial={{ opacity:0, scale:0.9 }}
+              initial={{ opacity:1, scale:0.9 }}
               animate={{ opacity:1, scale:1 }}
               transition={{ duration:0.7, delay:0.6, ease }}
               style={{
@@ -548,7 +548,7 @@ export default function Branding() {
             WHAT WE OFFER + PROCESS
         ══════════════════════════════ */}
         <motion.div
-          initial={{ opacity:0, y:20 }}
+          initial={{ opacity:1, y:20 }}
           whileInView={{ opacity:1, y:0 }}
           viewport={{ once:true }}
           transition={{ duration:0.7, ease }}
@@ -629,7 +629,7 @@ export default function Branding() {
             WHY CHOOSE US
         ══════════════════ */}
         <motion.div
-          initial={{ opacity:0, y:20 }}
+          initial={{ opacity:1, y:20 }}
           whileInView={{ opacity:1, y:0 }}
           viewport={{ once:true }}
           transition={{ duration:0.7, ease }}
@@ -680,7 +680,7 @@ export default function Branding() {
             TRUSTED BRANDS
         ════════════════════ */}
         <motion.div
-          initial={{ opacity:0, y:20 }}
+          initial={{ opacity:1, y:20 }}
           whileInView={{ opacity:1, y:0 }}
           viewport={{ once:true }}
           transition={{ duration:0.7, ease }}
@@ -732,7 +732,7 @@ export default function Branding() {
             FINAL CTA
         ════════════════ */}
         <motion.div
-          initial={{ opacity:0, y:20 }}
+          initial={{ opacity:1, y:20 }}
           whileInView={{ opacity:1, y:0 }}
           viewport={{ once:true }}
           transition={{ duration:0.7, ease }}

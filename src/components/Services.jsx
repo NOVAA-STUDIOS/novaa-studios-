@@ -47,7 +47,7 @@ export default function Services() {
 
         {/* ── Badge ── */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 1, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.22,1,0.36,1] }}
@@ -90,7 +90,7 @@ export default function Services() {
 
         {/* ── Heading ── */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 1, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.22,1,0.36,1] }}
@@ -104,6 +104,7 @@ export default function Services() {
             background:    'linear-gradient(160deg, #ffffff 0%, rgba(255,255,255,0.75) 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor:  'transparent',
+            backgroundClip:       'text',
           }}>
             Our Services
           </h1>
@@ -111,7 +112,7 @@ export default function Services() {
 
         {/* ── Subtext ── */}
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 1, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -161,7 +162,7 @@ const STATS = [
 function StatsBar() {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 1, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.7, delay: 0.3 }}

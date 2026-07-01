@@ -294,7 +294,7 @@ function InfoRow({ icon, label, lines, color }) {
 function BottomCard({ icon, title, desc, color, children, delay=0 }) {
   return (
     <motion.div
-      initial={{ opacity:0, y:20 }}
+      initial={{ opacity:1, y:20 }}
       whileInView={{ opacity:1, y:0 }}
       viewport={{ once:true }}
       transition={{ duration:0.6, delay, ease }}
@@ -395,7 +395,7 @@ export default function Contact() {
 
       {/* ══ HERO ══ */}
       <motion.div
-        initial={{ opacity:0, y:20 }}
+        initial={{ opacity:1, y:20 }}
         whileInView={{ opacity:1, y:0 }}
         viewport={{ once:true }}
         transition={{ duration:0.7, ease }}
@@ -443,7 +443,7 @@ export default function Contact() {
 
         {/* ── LEFT — FORM ── */}
         <motion.div
-          initial={{ opacity:0, x:-24 }}
+          initial={{ opacity:1, x:-24 }}
           whileInView={{ opacity:1, x:0 }}
           viewport={{ once:true }}
           transition={{ duration:0.8, ease }}
@@ -558,7 +558,7 @@ export default function Contact() {
 
         {/* ── RIGHT — CONTACT INFO ── */}
         <motion.div
-          initial={{ opacity:0, x:24 }}
+          initial={{ opacity:1, x:24 }}
           whileInView={{ opacity:1, x:0 }}
           viewport={{ once:true }}
           transition={{ duration:0.8, delay:0.1, ease }}

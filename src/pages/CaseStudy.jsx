@@ -125,7 +125,7 @@ const SIMILAR = [
 /* ─── Sub-components ─── */
 const FadeIn = ({ children, delay=0, x=0, y=20 }) => (
   <motion.div
-    initial={{ opacity:0, x, y }}
+    initial={{ opacity:1, x, y }}
     whileInView={{ opacity:1, x:0, y:0 }}
     viewport={{ once:true, margin:'-60px' }}
     transition={{ duration:0.65, ease, delay }}
@@ -162,7 +162,7 @@ function DeviceMockup({ project }) {
     <div style={{ position:'relative', width:'100%', minHeight:'340px' }}>
       {/* Laptop */}
       <motion.div
-        initial={{ opacity:0, x:40, y:20 }}
+        initial={{ opacity:1, x:40, y:20 }}
         animate={{ opacity:1, x:0, y:0 }}
         transition={{ duration:0.9, ease, delay:0.2 }}
         style={{
@@ -214,7 +214,7 @@ function DeviceMockup({ project }) {
 
       {/* Phone */}
       <motion.div
-        initial={{ opacity:0, x:20, y:40 }}
+        initial={{ opacity:1, x:20, y:40 }}
         animate={{ opacity:1, x:0, y:0 }}
         transition={{ duration:0.9, ease, delay:0.4 }}
         style={{

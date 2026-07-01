@@ -33,7 +33,7 @@ export default function Hero() {
 
         {/* Badge */}
         <motion.div
-          initial={{ opacity:0, y:20, scale:0.96 }}
+          initial={{ opacity:1, y:20, scale:0.96 }}
           animate={{ opacity:1, y:0,  scale:1 }}
           transition={{ duration:0.7, ease, delay:0.15 }}
           style={{ display:'inline-flex', alignItems:'center', gap:'10px', padding:'8px 22px', borderRadius:'50px', marginBottom:'2.5rem', ...liquidGlass }}
@@ -46,7 +46,7 @@ export default function Hero() {
 
         {/* H1 */}
         <motion.h1
-          initial={{ opacity:0, y:32 }}
+          initial={{ opacity:1, y:32 }}
           animate={{ opacity:1, y:0 }}
           transition={{ duration:0.9, ease, delay:0.28 }}
           style={{ fontSize:'clamp(3.2rem,8.5vw,6.5rem)', fontWeight:800, lineHeight:1.02, marginBottom:'1.6rem', letterSpacing:'-0.03em', color:'#fff' }}
@@ -59,7 +59,7 @@ export default function Hero() {
 
         {/* Sub */}
         <motion.p
-          initial={{ opacity:0, y:20 }}
+          initial={{ opacity:1, y:20 }}
           animate={{ opacity:1, y:0 }}
           transition={{ duration:0.8, ease, delay:0.42 }}
           style={{ fontSize:'1.12rem', color:'rgba(255,255,255,0.44)', maxWidth:'490px', margin:'0 auto 3rem', lineHeight:1.78 }}
@@ -69,7 +69,7 @@ export default function Hero() {
 
         {/* ── CTAs ── */}
         <motion.div
-          initial={{ opacity:0, y:16 }}
+          initial={{ opacity:1, y:16 }}
           animate={{ opacity:1, y:0 }}
           transition={{ duration:0.7, ease, delay:0.55 }}
           style={{ display:'flex', gap:'14px', justifyContent:'center', flexWrap:'wrap' }}
@@ -97,7 +97,7 @@ export default function Hero() {
 
         {/* Scroll hint */}
         <motion.div
-          initial={{ opacity:0 }} animate={{ opacity:1 }}
+          initial={{ opacity:1 }} animate={{ opacity:1 }}
           transition={{ delay:1.3, duration:1 }}
           style={{ marginTop:'5rem', display:'flex', flexDirection:'column', alignItems:'center', gap:'8px' }}
         >

@@ -85,7 +85,7 @@ const [lastScrollY, setLastScrollY] = useState(0);
       ══════════════════════════════ */}
       <motion.div
         className="desktop-nav"
-        initial={{ y:-90, opacity:0 }}
+        initial={{ y:-90, opacity:1 }}
         animate={{
   y: showNav ? 0 : -80,
   opacity: showNav ? 1 : 0,
@@ -147,7 +147,7 @@ const [lastScrollY, setLastScrollY] = useState(0);
       ══════════════════════════════ */}
       <motion.header
         className="mobile-nav"
-        initial={{ y:-60, opacity:0 }}
+        initial={{ y:-60, opacity:1 }}
         animate={{ y:0,   opacity:1 }}
         transition={{ duration:0.7, ease:SP }}
         style={{
@@ -181,7 +181,7 @@ const [lastScrollY, setLastScrollY] = useState(0);
             {/* Backdrop */}
             <motion.div
               key="bd"
-              initial={{ opacity:0 }} animate={{ opacity:1 }} exit={{ opacity:0 }}
+              initial={{ opacity:1 }} animate={{ opacity:1 }} exit={{ opacity:0 }}
               transition={{ duration:0.18 }}
               onClick={() => setOpen(false)}
               style={{ position:'fixed', inset:0, zIndex:1001, cursor:'default' }}
@@ -191,7 +191,7 @@ const [lastScrollY, setLastScrollY] = useState(0);
             <motion.div
               key="panel"
               role="menu"
-              initial={{ opacity:0, y:-18, scale:0.95, filter:'blur(6px)' }}
+              initial={{ opacity:1, y:-18, scale:0.95, filter:'blur(6px)' }}
               animate={{ opacity:1, y:0,   scale:1,    filter:'blur(0px)' }}
               exit={{   opacity:0, y:-14,  scale:0.95, filter:'blur(6px)' }}
               transition={{ duration:0.34, ease:SP }}
@@ -231,7 +231,7 @@ const [lastScrollY, setLastScrollY] = useState(0);
                       key={link.label}
                       role="menuitem"
                       onClick={() => go(link.href)}
-                      initial={{ opacity:0, x:-10 }}
+                      initial={{ opacity:1, x:-10 }}
                       animate={{ opacity:1, x:0   }}
                       transition={{ delay:i*0.045, duration:0.26, ease:SP }}
                       whileHover={{ background:'rgba(255,255,255,0.08)', x:4 }}

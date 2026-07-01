@@ -69,7 +69,7 @@ export default function About() {
         <div>
           {/* Badge */}
           <motion.div
-            initial={{ opacity:0, y:14 }}
+            initial={{ opacity:1, y:14 }}
             whileInView={{ opacity:1, y:0 }}
             viewport={{ once:true }}
             transition={{ duration:0.6, ease }}
@@ -105,7 +105,7 @@ export default function About() {
 
           {/* Heading */}
           <motion.h1
-            initial={{ opacity:0, y:24 }}
+            initial={{ opacity:1, y:24 }}
             whileInView={{ opacity:1, y:0 }}
             viewport={{ once:true }}
             transition={{ duration:0.8, delay:0.1, ease }}
@@ -121,6 +121,7 @@ export default function About() {
               background:           'linear-gradient(160deg,#fff 0%,rgba(255,255,255,0.82) 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor:  'transparent',
+              backgroundClip:       'text',
             }}>
               We're More Than
             </span>
@@ -129,6 +130,7 @@ export default function About() {
               background:           'linear-gradient(135deg, #c084fc 0%, #a855f7 50%, #9333ea 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor:  'transparent',
+              backgroundClip:       'text',
             }}>
               A Digital Agency.
             </span>
@@ -136,7 +138,7 @@ export default function About() {
 
           {/* Para */}
           <motion.p
-            initial={{ opacity:0, y:16 }}
+            initial={{ opacity:1, y:16 }}
             whileInView={{ opacity:1, y:0 }}
             viewport={{ once:true }}
             transition={{ duration:0.7, delay:0.2, ease }}
@@ -152,41 +154,22 @@ export default function About() {
           </motion.p>
 
           {/* CTA Button */}
-          <motion.button
-            initial={{ opacity:0, y:12 }}
+          <motion.div
+            initial={{ opacity:1, y:12 }}
             whileInView={{ opacity:1, y:0 }}
             viewport={{ once:true }}
             transition={{ duration:0.6, delay:0.3, ease }}
-            whileHover={{ scale:1.04, y:-2 }}
-            whileTap={{ scale:0.97 }}
-            style={{
-              display:              'inline-flex',
-              alignItems:           'center',
-              gap:                  '10px',
-              padding:              '13px 26px',
-              borderRadius:         '50px',
-              background:           'rgba(20,15,50,0.65)',
-              backdropFilter:       'blur(24px)',
-              WebkitBackdropFilter: 'blur(24px)',
-              border:               '1px solid rgba(150,80,255,0.4)',
-              boxShadow:            'inset 0 1px 0 rgba(255,255,255,0.12), 0 4px 24px rgba(120,60,220,0.2)',
-              color:                '#fff',
-              fontWeight:           600,
-              fontSize:             '0.93rem',
-              cursor:               'pointer',
-              letterSpacing:        '0.2px',
-              transition:           'all 0.3s ease',
-            }}
+            style={{ display:'inline-block' }}
           >
             <CTAButton size="md">
               Let's Work Together →
             </CTAButton>
-          </motion.button>
+          </motion.div>
         </div>
 
         {/* RIGHT — Image + Floating card */}
         <motion.div
-          initial={{ opacity:0, x:32 }}
+          initial={{ opacity:1, x:32 }}
           whileInView={{ opacity:1, x:0 }}
           viewport={{ once:true }}
           transition={{ duration:0.9, delay:0.2, ease }}
@@ -234,7 +217,7 @@ export default function About() {
 
           {/* Floating glass card — "10+ Years" */}
           <motion.div
-            initial={{ opacity:0, scale:0.9, y:10 }}
+            initial={{ opacity:1, scale:0.9, y:10 }}
             whileInView={{ opacity:1, scale:1, y:0 }}
             viewport={{ once:true }}
             transition={{ duration:0.7, delay:0.5, ease }}
@@ -285,7 +268,7 @@ export default function About() {
           STATS BAR
       ══════════════════ */}
       <motion.div
-        initial={{ opacity:0, y:20 }}
+        initial={{ opacity:1, y:20 }}
         whileInView={{ opacity:1, y:0 }}
         viewport={{ once:true }}
         transition={{ duration:0.7, delay:0.2, ease }}
@@ -362,7 +345,7 @@ export default function About() {
           WHO WE ARE
       ══════════════════ */}
       <motion.div
-        initial={{ opacity:0, y:24 }}
+        initial={{ opacity:1, y:24 }}
         whileInView={{ opacity:1, y:0 }}
         viewport={{ once:true }}
         transition={{ duration:0.7, ease }}

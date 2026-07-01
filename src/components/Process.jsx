@@ -11,7 +11,7 @@ export default function Process() {
   return (
     <section id="process" style={{ padding:'8rem 2rem', maxWidth:'860px', margin:'0 auto' }}>
       <motion.div
-        initial={{ opacity:0, y:28 }}
+        initial={{ opacity:1, y:28 }}
         whileInView={{ opacity:1, y:0 }}
         viewport={{ once:true }}
         transition={{ duration:0.7 }}
@@ -32,7 +32,7 @@ export default function Process() {
         {STEPS.map((s, i) => (
           <motion.div
             key={s.n}
-            initial={{ opacity:0, x:-20 }}
+            initial={{ opacity:1, x:-20 }}
             whileInView={{ opacity:1, x:0 }}
             viewport={{ once:true }}
             transition={{ delay:i*0.1, duration:0.6 }}

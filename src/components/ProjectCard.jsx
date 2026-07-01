@@ -13,7 +13,7 @@ export default function ProjectCard({ category, title, desc, delay = 0, gradient
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 28 }}
+      initial={{ opacity: 1, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] }}

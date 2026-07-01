@@ -3,6 +3,8 @@
    @font-face + @tailwind + Full Media Query Coverage
 ============================================================ */
 
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @font-face {
   font-family: 'Moonwalk';
   src: url('/fonts/Moonwalk.ttf') format('truetype');
@@ -10,8 +12,6 @@
   font-style: normal;
   font-display: swap;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -735,12 +735,8 @@ input, textarea {
 }
 
 /* ============================================================
-   OVERFLOW GUARD — NUCLEAR OPTION
+   OVERFLOW GUARD — scoped to media (not all elements)
 ============================================================ */
-* {
-  max-width: 100%;
-}
-
 img, canvas, video, iframe {
   max-width: 100%;
 }

@@ -24,7 +24,7 @@ function ProcessCard({ num, icon, title, desc, delay = 0, isLast = false }) {
       )}
 
       <motion.div
-        initial={{ opacity:0, y:24 }}
+        initial={{ opacity:1, y:24 }}
         whileInView={{ opacity:1, y:0 }}
         viewport={{ once:true }}
         transition={{ duration:0.6, delay, ease }}
@@ -69,7 +69,7 @@ function ProcessCard({ num, icon, title, desc, delay = 0, isLast = false }) {
 function OfferItem({ icon, title, desc, color, delay=0 }) {
   return (
     <motion.div
-      initial={{ opacity:0, x:-16 }}
+      initial={{ opacity:1, x:-16 }}
       whileInView={{ opacity:1, x:0 }}
       viewport={{ once:true }}
       transition={{ duration:0.5, delay, ease }}
@@ -107,7 +107,7 @@ function OfferItem({ icon, title, desc, color, delay=0 }) {
 function WhyCard({ icon, title, desc, color, delay=0 }) {
   return (
     <motion.div
-      initial={{ opacity:0, y:16 }}
+      initial={{ opacity:1, y:16 }}
       whileInView={{ opacity:1, y:0 }}
       viewport={{ once:true }}
       transition={{ duration:0.5, delay, ease }}
@@ -149,7 +149,7 @@ export default function WebDesign() {
 
         {/* ── Breadcrumb ── */}
         <motion.div
-          initial={{ opacity:0 }}
+          initial={{ opacity:1 }}
           animate={{ opacity:1 }}
           transition={{ duration:0.6, delay:0.2 }}
           style={{
@@ -190,7 +190,7 @@ export default function WebDesign() {
           <div>
             {/* Badge */}
             <motion.div
-              initial={{ opacity:0, y:14 }}
+              initial={{ opacity:1, y:14 }}
               animate={{ opacity:1, y:0 }}
               transition={{ duration:0.6, ease, delay:0.1 }}
               style={{ marginBottom:'1.5rem' }}
@@ -221,7 +221,7 @@ export default function WebDesign() {
 
             {/* Headline */}
             <motion.h1
-              initial={{ opacity:0, y:28 }}
+              initial={{ opacity:1, y:28 }}
               animate={{ opacity:1, y:0 }}
               transition={{ duration:0.9, ease, delay:0.2 }}
               style={{
@@ -248,7 +248,7 @@ export default function WebDesign() {
 
             {/* Para */}
             <motion.p
-              initial={{ opacity:0, y:16 }}
+              initial={{ opacity:1, y:16 }}
               animate={{ opacity:1, y:0 }}
               transition={{ duration:0.7, ease, delay:0.32 }}
               style={{
@@ -261,7 +261,7 @@ export default function WebDesign() {
 
             {/* CTAs */}
             <motion.div
-              initial={{ opacity:0, y:14 }}
+              initial={{ opacity:1, y:14 }}
               animate={{ opacity:1, y:0 }}
               transition={{ duration:0.6, ease, delay:0.42 }}
               style={{ display:'flex', gap:'12px', flexWrap:'wrap' }}
@@ -301,7 +301,7 @@ export default function WebDesign() {
 
           {/* RIGHT — Mockup */}
           <motion.div
-            initial={{ opacity:0, x:32 }}
+            initial={{ opacity:1, x:32 }}
             animate={{ opacity:1, x:0 }}
             transition={{ duration:0.9, ease, delay:0.25 }}
             style={{ position:'relative' }}
@@ -396,7 +396,7 @@ export default function WebDesign() {
 
             {/* Floating stat card */}
             <motion.div
-              initial={{ opacity:0, scale:0.9 }}
+              initial={{ opacity:1, scale:0.9 }}
               animate={{ opacity:1, scale:1 }}
               transition={{ duration:0.7, delay:0.6, ease }}
               style={{
@@ -437,7 +437,7 @@ export default function WebDesign() {
 
           {/* LEFT — What We Offer */}
           <motion.div
-            initial={{ opacity:0, y:24 }}
+            initial={{ opacity:1, y:24 }}
             whileInView={{ opacity:1, y:0 }}
             viewport={{ once:true }}
             transition={{ duration:0.7, ease }}
@@ -472,7 +472,7 @@ export default function WebDesign() {
 
           {/* RIGHT — Design Process */}
           <motion.div
-            initial={{ opacity:0, y:24 }}
+            initial={{ opacity:1, y:24 }}
             whileInView={{ opacity:1, y:0 }}
             viewport={{ once:true }}
             transition={{ duration:0.7, delay:0.1, ease }}
@@ -514,7 +514,7 @@ export default function WebDesign() {
             WHY CHOOSE US
         ════════════════════════════ */}
         <motion.div
-          initial={{ opacity:0, y:20 }}
+          initial={{ opacity:1, y:20 }}
           whileInView={{ opacity:1, y:0 }}
           viewport={{ once:true }}
           transition={{ duration:0.7, ease }}
@@ -547,7 +547,7 @@ export default function WebDesign() {
             FINAL CTA
         ════════════════════════════ */}
         <motion.div
-          initial={{ opacity:0, y:24 }}
+          initial={{ opacity:1, y:24 }}
           whileInView={{ opacity:1, y:0 }}
           viewport={{ once:true }}
           transition={{ duration:0.7, ease }}

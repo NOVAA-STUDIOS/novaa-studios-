@@ -47,7 +47,7 @@ function ProjectCard({ category, title, desc, gradientFrom, gradientTo, delay=0 
 
   return (
     <motion.div
-      initial={{ opacity:0, y:28 }}
+      initial={{ opacity:1, y:28 }}
       whileInView={{ opacity:1, y:0 }}
       viewport={{ once:true }}
       transition={{ duration:0.65, delay, ease }}
@@ -196,7 +196,7 @@ export default function Work({ standalone = false }) {
       >
         {/* Left */}
         <div>
-          <motion.div initial={{ opacity:0, y:14 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ duration:0.6, ease }} style={{ marginBottom:'1.25rem' }}>
+          <motion.div initial={{ opacity:1, y:14 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ duration:0.6, ease }} style={{ marginBottom:'1.25rem' }}>
             <div style={{
               display:'inline-flex', alignItems:'center', gap:'9px', padding:'7px 16px', borderRadius:'50px',
               background:'rgba(10,10,40,0.65)', backdropFilter:'blur(20px)', WebkitBackdropFilter:'blur(20px)',
@@ -209,24 +209,24 @@ export default function Work({ standalone = false }) {
             </div>
           </motion.div>
 
-          <motion.div initial={{ opacity:0, y:24 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ duration:0.8, delay:0.1, ease }}>
+          <motion.div initial={{ opacity:1, y:24 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ duration:0.8, delay:0.1, ease }}>
             <h1 style={{ fontSize:'clamp(2.4rem,5vw,3.8rem)', fontWeight:800, lineHeight:1.08, letterSpacing:'-0.03em', marginBottom:'1.25rem' }}>
               <span style={{ background:'linear-gradient(160deg,#fff 0%,rgba(255,255,255,0.85) 100%)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', display:'block' }}>Work That</span>
               <span style={{ background:'linear-gradient(135deg,#c084fc 0%,#06b6d4 100%)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', display:'block' }}>Speaks for Itself.</span>
             </h1>
           </motion.div>
 
-          <motion.p initial={{ opacity:0, y:14 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ duration:0.7, delay:0.2, ease }}
+          <motion.p initial={{ opacity:1, y:14 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ duration:0.7, delay:0.2, ease }}
             style={{ fontSize:'0.92rem', color:'rgba(255,255,255,0.42)', lineHeight:1.8, maxWidth:'380px' }}>
             We partner with startups and brands to design and build digital experiences that are not only beautiful but also purposeful and results-driven.
           </motion.p>
         </div>
 
         {/* Right: 2×2 stat cards */}
-        <motion.div initial={{ opacity:0, x:24 }} whileInView={{ opacity:1, x:0 }} viewport={{ once:true }} transition={{ duration:0.8, delay:0.15, ease }}
+        <motion.div initial={{ opacity:1, x:24 }} whileInView={{ opacity:1, x:0 }} viewport={{ once:true }} transition={{ duration:0.8, delay:0.15, ease }}
           style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'0.75rem' }}>
           {STATS.map((s, i) => (
-            <motion.div key={s.l} initial={{ opacity:0, y:16 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ delay:0.2+i*0.08, duration:0.6, ease }}
+            <motion.div key={s.l} initial={{ opacity:1, y:16 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ delay:0.2+i*0.08, duration:0.6, ease }}
               style={{
                 padding:'1.25rem', borderRadius:'16px',
                 background:'rgba(15,10,40,0.55)',
@@ -249,7 +249,7 @@ export default function Work({ standalone = false }) {
       </div>
 
       {/* ── Filter tabs ── */}
-      <motion.div initial={{ opacity:0, y:14 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ duration:0.6, ease }}
+      <motion.div initial={{ opacity:1, y:14 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ duration:0.6, ease }}
         style={{ display:'flex', gap:'6px', marginBottom:'2rem', flexWrap:'wrap', overflowX:'auto', paddingBottom:'4px' }}>
         {TABS.map(tab => (
           <motion.button key={tab} onClick={() => setActive(tab)}
@@ -273,7 +273,7 @@ export default function Work({ standalone = false }) {
       {/* ── Projects grid ── */}
       <div id="featured-projects" style={{ scrollMarginTop:'80px' }}>
         <AnimatePresence mode="wait">
-          <motion.div key={active} initial={{ opacity:0, y:12 }} animate={{ opacity:1, y:0 }} exit={{ opacity:0, y:-8 }} transition={{ duration:0.35, ease }}
+          <motion.div key={active} initial={{ opacity:1, y:12 }} animate={{ opacity:1, y:0 }} exit={{ opacity:0, y:-8 }} transition={{ duration:0.35, ease }}
             className="projects-grid"
             style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(300px,100%),1fr))', gap:'1.1rem', marginBottom:'3rem' }}>
             {filtered.map((p, i) => (
@@ -285,7 +285,7 @@ export default function Work({ standalone = false }) {
 
       {/* ── See More Projects — only on homepage section ── */}
       {!standalone && (
-        <motion.div initial={{ opacity:0, y:16 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ duration:0.6, ease }}
+        <motion.div initial={{ opacity:1, y:16 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ duration:0.6, ease }}
           style={{ display:'flex', justifyContent:'center' }}>
           <motion.button
             onClick={seeMoreProjects}

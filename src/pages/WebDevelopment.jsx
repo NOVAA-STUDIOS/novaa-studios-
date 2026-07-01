@@ -25,7 +25,7 @@ function DevProcess({ num, icon, title, desc, delay=0, isLast=false }) {
         }} />
       )}
       <motion.div
-        initial={{ opacity:0, y:20 }}
+        initial={{ opacity:1, y:20 }}
         whileInView={{ opacity:1, y:0 }}
         viewport={{ once:true }}
         transition={{ duration:0.6, delay, ease }}
@@ -79,7 +79,7 @@ function DevProcess({ num, icon, title, desc, delay=0, isLast=false }) {
 function BulletItem({ text, delay=0 }) {
   return (
     <motion.div
-      initial={{ opacity:0, x:-12 }}
+      initial={{ opacity:1, x:-12 }}
       whileInView={{ opacity:1, x:0 }}
       viewport={{ once:true }}
       transition={{ duration:0.45, delay, ease }}
@@ -107,7 +107,7 @@ function BulletItem({ text, delay=0 }) {
 function TechBadge({ icon, name, delay=0 }) {
   return (
     <motion.div
-      initial={{ opacity:0, y:12 }}
+      initial={{ opacity:1, y:12 }}
       whileInView={{ opacity:1, y:0 }}
       viewport={{ once:true }}
       transition={{ duration:0.45, delay, ease }}
@@ -141,7 +141,7 @@ export default function WebDevelopment() {
 
         {/* Breadcrumb */}
         <motion.div
-          initial={{ opacity:0 }}
+          initial={{ opacity:1 }}
           animate={{ opacity:1 }}
           transition={{ duration:0.6, delay:0.2 }}
           style={{
@@ -176,7 +176,7 @@ export default function WebDevelopment() {
           <div>
             {/* Badge */}
             <motion.div
-              initial={{ opacity:0, y:14 }}
+              initial={{ opacity:1, y:14 }}
               animate={{ opacity:1, y:0 }}
               transition={{ duration:0.6, ease, delay:0.1 }}
               style={{ marginBottom:'1.5rem' }}
@@ -206,7 +206,7 @@ export default function WebDevelopment() {
 
             {/* Headline */}
             <motion.h1
-              initial={{ opacity:0, y:28 }}
+              initial={{ opacity:1, y:28 }}
               animate={{ opacity:1, y:0 }}
               transition={{ duration:0.9, ease, delay:0.2 }}
               style={{
@@ -246,7 +246,7 @@ export default function WebDevelopment() {
 
             {/* Para */}
             <motion.p
-              initial={{ opacity:0, y:16 }}
+              initial={{ opacity:1, y:16 }}
               animate={{ opacity:1, y:0 }}
               transition={{ duration:0.7, ease, delay:0.32 }}
               style={{
@@ -259,7 +259,7 @@ export default function WebDevelopment() {
 
             {/* Buttons */}
             <motion.div
-              initial={{ opacity:0, y:14 }}
+              initial={{ opacity:1, y:14 }}
               animate={{ opacity:1, y:0 }}
               transition={{ duration:0.6, ease, delay:0.42 }}
               style={{ display:'flex', gap:'12px', flexWrap:'wrap' }}
@@ -299,7 +299,7 @@ export default function WebDevelopment() {
 
           {/* RIGHT — Code editor + stat card */}
           <motion.div
-            initial={{ opacity:0, x:32 }}
+            initial={{ opacity:1, x:32 }}
             animate={{ opacity:1, x:0 }}
             transition={{ duration:0.9, ease, delay:0.25 }}
             style={{ position:'relative' }}
@@ -321,7 +321,7 @@ export default function WebDevelopment() {
 
             {/* Floating stat card */}
             <motion.div
-              initial={{ opacity:0, scale:0.9 }}
+              initial={{ opacity:1, scale:0.9 }}
               animate={{ opacity:1, scale:1 }}
               transition={{ duration:0.7, delay:0.65, ease }}
               style={{
@@ -356,7 +356,7 @@ export default function WebDevelopment() {
             WHAT WE OFFER + PROCESS
         ════════════════════════════ */}
         <motion.div
-          initial={{ opacity:0, y:20 }}
+          initial={{ opacity:1, y:20 }}
           whileInView={{ opacity:1, y:0 }}
           viewport={{ once:true }}
           transition={{ duration:0.7, ease }}
@@ -437,7 +437,7 @@ export default function WebDevelopment() {
             TECH STACK
         ════════════════════════ */}
         <motion.div
-          initial={{ opacity:0, y:20 }}
+          initial={{ opacity:1, y:20 }}
           whileInView={{ opacity:1, y:0 }}
           viewport={{ once:true }}
           transition={{ duration:0.7, ease }}
@@ -477,7 +477,7 @@ export default function WebDevelopment() {
             FINAL CTA
         ════════════════ */}
         <motion.div
-          initial={{ opacity:0, y:20 }}
+          initial={{ opacity:1, y:20 }}
           whileInView={{ opacity:1, y:0 }}
           viewport={{ once:true }}
           transition={{ duration:0.7, ease }}
