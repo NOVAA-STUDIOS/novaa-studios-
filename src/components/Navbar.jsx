@@ -8,6 +8,7 @@ const LINKS = [
   { label:'About',     href:'/#about',    icon:'👤' },
   { label:'Services',  href:'/#services', icon:'💼' },
   { label:'Portfolio', href:'/work',      icon:'📂' },
+  { label:'Projects',  href:'/projects',  icon:'🗂️' },
   { label:'Contact',   href:'/contact',   icon:'✉️' },
 ]
 
